@@ -36,7 +36,9 @@ This rebuild uses **Tauri v2**, which links against `libwebkit2gtk-4.1` (the cur
 | <img src="https://img.shields.io/badge/Tray-System%20Tray-9cf" alt="System Tray"/> | **System tray** | Enabled for Linux desktop integration |
 | <img src="https://img.shields.io/badge/Size-1200x780-informational" alt="Window Size"/> | **Native window** | Matches original Kimi desktop dimensions |
 
-## Install
+## Download
+
+Grab the latest `.deb` from [GitHub Releases](https://github.com/johnohhh1/kimi-app/releases).
 
 ```bash
 sudo dpkg -i kimi_1.0.0_amd64.deb
