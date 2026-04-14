@@ -1,12 +1,40 @@
-# Kimi Desktop for Ubuntu 26.04+
+<p align="center">
+  <img src="assets/KIMI-K2.jpg" alt="Kimi K2" width="600"/>
+</p>
 
-Native desktop app for [Kimi](https://kimi.moonshot.cn) (Moonshot AI), rebuilt for Ubuntu 26.04+ using [Pake](https://github.com/tw93/Pake) v3 with Tauri v2.
+<h1 align="center">Kimi Desktop for Ubuntu 26.04+</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Tauri-v2-blue?logo=tauri" alt="Tauri v2"/>
+  <img src="https://img.shields.io/badge/Pake-v3-orange?logo=npm" alt="Pake v3"/>
+  <img src="https://img.shields.io/badge/Ubuntu-26.04+-E95420?logo=ubuntu&logoColor=white" alt="Ubuntu 26.04+"/>
+  <img src="https://img.shields.io/badge/Rust-%3E%3D1.85-dea584?logo=rust&logoColor=white" alt="Rust >=1.85"/>
+  <img src="https://img.shields.io/badge/Node-%3E%3D22-339933?logo=node.js&logoColor=white" alt="Node >=22"/>
+  <img src="https://img.shields.io/badge/platform-Linux-FCC624?logo=linux&logoColor=black" alt="Linux"/>
+  <img src="https://img.shields.io/badge/arch-amd64-0078D4?logo=amd&logoColor=white" alt="amd64"/>
+</p>
+
+<p align="center">
+  Native desktop app for <a href="https://kimi.moonshot.cn">Kimi</a> (Moonshot AI),<br/>
+  rebuilt for Ubuntu 26.04+ using <a href="https://github.com/tw93/Pake">Pake</a> v3 with Tauri v2.
+</p>
+
+---
 
 ## Why this exists
 
 The official Kimi desktop `.deb` (from [kimi-moonshot](https://github.com/kimi-moonshot/kimi-moonshot)) is built with Tauri v1, which hard-links `libwebkit2gtk-4.0.so.37`. That library was dropped from Ubuntu after 22.04 — so the official package fails to install on Ubuntu 24.04+ and 26.04 with missing dependency errors.
 
-This rebuild uses Tauri v2, which links against `libwebkit2gtk-4.1` (the current version shipped in Ubuntu 24.04+ and 26.04).
+This rebuild uses **Tauri v2**, which links against `libwebkit2gtk-4.1` (the current version shipped in Ubuntu 24.04+ and 26.04).
+
+## Features
+
+| | Feature | Detail |
+|---|---|---|
+| <img src="https://img.shields.io/badge/Tauri-v2-blue?logo=tauri" alt="Tauri"/> | **Modern runtime** | Links against `libwebkit2gtk-4.1` instead of the removed `4.0` |
+| <img src="https://img.shields.io/badge/Auth-OAuth%2FSSO-green" alt="OAuth/SSO"/> | **OAuth / SSO support** | `--new-window` so Google and other OAuth providers work in-app |
+| <img src="https://img.shields.io/badge/Tray-System%20Tray-9cf" alt="System Tray"/> | **System tray** | Enabled for Linux desktop integration |
+| <img src="https://img.shields.io/badge/Size-1200x780-informational" alt="Window Size"/> | **Native window** | Matches original Kimi desktop dimensions |
 
 ## Install
 
@@ -15,12 +43,6 @@ sudo dpkg -i kimi_1.0.0_amd64.deb
 ```
 
 Or rebuild from source (see below).
-
-## What changed from upstream
-
-- **Tauri v1 → v2**: Links against `libwebkit2gtk-4.1` instead of the removed `4.0`
-- **OAuth/SSO support**: Built with `--new-window` so Google and other OAuth providers work in-app instead of being blocked
-- **System tray**: Enabled for Linux
 
 ## Rebuild from source
 
