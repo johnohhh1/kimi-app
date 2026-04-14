@@ -1,0 +1,7 @@
+node_modules/
+dist/
+*.deb
+target/
+.DS_Store
+*.exe
+extracted/

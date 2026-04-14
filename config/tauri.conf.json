@@ -1,0 +1,44 @@
+{
+    "productName": "kimi",
+    "identifier": "com.pake.a05686a",
+    "version": "1.0.0",
+    "app": {
+        "withGlobalTauri": true,
+        "security": {
+            "headers": {},
+            "csp": null
+        }
+    },
+    "build": {
+        "frontendDist": "../dist"
+    },
+    "bundle": {
+        "icon": [
+            "png/kimi_512.png"
+        ],
+        "active": true,
+        "linux": {
+            "deb": {
+                "depends": [
+                    "curl",
+                    "wget"
+                ],
+                "files": {
+                    "/usr/share/applications/com.pake.kimi.desktop": "assets/com.pake.kimi.desktop"
+                }
+            },
+            "rpm": {
+                "files": {
+                    "/usr/share/applications/com.pake.kimi.desktop": "assets/com.pake.kimi.desktop"
+                }
+            }
+        },
+        "targets": [
+            "deb"
+        ],
+        "resources": [
+            "png/kimi_512.png"
+        ]
+    },
+    "mainBinaryName": "pake-kimi"
+}
